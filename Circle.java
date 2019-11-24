@@ -35,9 +35,4 @@ public class Circle {
 		this.position.setX(y);
 	}
 	
-	public static boolean circleCollision(Circle c1, Circle c2) {
-		return Math.pow(c1.position.getX() - c2.position.getX(),2) + 
-			   Math.pow(c1.position.getY() - c2.position.getY(),2) <
-			   c1.getRadius() + c2.getRadius();
-	}
 }
