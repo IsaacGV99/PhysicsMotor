@@ -7,6 +7,7 @@ public abstract class ObjectCollision {
 	public ObjectCollision(Shape2D obj1, Shape2D obj2) {
 		this.obj1 = obj1;
 		this.obj2 = obj2;
+		updateStatus();
 	}
 	
 	public boolean isThereCollision(){
