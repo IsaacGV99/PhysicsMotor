@@ -4,7 +4,7 @@ public abstract class EnvironmentCollision {
   	protected Environment env;
 	private boolean collision;
 
-	public EnvironmentCollision(Shape2D obj, Environment env) {
+	public EnvironmentCollision(Shapes2D obj, Environment env) {
 		this.obj = obj;
 		this.env = env;
 		updateStatus();
