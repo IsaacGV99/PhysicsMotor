@@ -46,14 +46,4 @@ public abstract class Shapes2D{
 		this.speed.setY(newSpeed.getY());
      	}
 }
-    
-    public int getMass() {
-    	return this.mass;
-    }
-    
-    public void setMass(int mass) {
-    	this.mass = mass;
-    }
-    
-}
 
