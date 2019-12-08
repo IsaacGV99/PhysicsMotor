@@ -1,7 +1,7 @@
 public abstract class EnvironmentCollision {
 
 	protected Shapes2D obj; 
-  protected Environment env;
+  	protected Environment env;
 	private boolean collision;
 
 	public EnvironmentCollision(Shape2D obj, Environment env) {
