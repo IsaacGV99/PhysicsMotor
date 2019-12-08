@@ -1,12 +1,13 @@
+
 public abstract class EnvironmentCollision {
 
 	protected Shapes2D obj; 
-  	protected Environment env;
+  	protected Object environment;
 	private boolean collision;
 
-	public EnvironmentCollision(Shapes2D obj, Environment env) {
+	public EnvironmentCollision(Shapes2D obj, Object env) {
 		this.obj = obj;
-		this.env = env;
+		this.environment = env;
 		updateStatus();
 	}
 	
@@ -18,8 +19,9 @@ public abstract class EnvironmentCollision {
 		this.collision = this.areColliding();
 		return this.collision;
 	}
-	protected abstract void collisionManagment();
+	public abstract void collisionManagment();
 	
 	protected abstract boolean areColliding();	
 	
 }
+
