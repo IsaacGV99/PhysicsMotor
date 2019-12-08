@@ -1,4 +1,3 @@
-package com.iteso.proyecto_prueba_1;
 
 public class CirclesCollision extends ObjectCollision{
 
