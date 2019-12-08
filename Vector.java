@@ -69,6 +69,10 @@ public class Vector {
 		return Math.sqrt(Math.pow(v1.getX() - v2.getX(), 2) +
 						 Math.pow(v1.getY() - v2.getY(), 2));
 	}
+	public static double distance2(Vector v1, Vector v2) {
+		return Math.pow(v1.getX() - v2.getX(), 2) +
+						 Math.pow(v1.getY() - v2.getY(), 2);
+	}
 	
 	public static int dot(Vector v1, Vector v2) {
 		return v1.getX()*v2.getX() + v1.getY()*v2.getY();
