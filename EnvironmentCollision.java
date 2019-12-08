@@ -7,6 +7,7 @@ public abstract class EnvironmentCollision {
 	public EnvironmentCollision(Shape2D obj, Environment env) {
 		this.obj = obj;
 		this.env = env;
+		updateStatus();
 	}
 	
 	public boolean isThereCollision(){
