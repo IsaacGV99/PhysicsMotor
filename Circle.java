@@ -2,24 +2,23 @@ package com.iteso.motor;
 
 public class Circle extends Shapes2D{
 	
-	private int radius;
+	private double radius;
 	
 	
-	public Circle(int rad, int x, int y) {
-		super(x, y);
-		this.radius = rad;
+	public Circle(double rad, double x, double y) {
+		this(rad,x,y,0,0,1);
 	}
 	
-	public Circle(int rad, int xPos, int yPos, int xSpeed, int ySpeed, int mass) {
+	public Circle(double rad, double xPos, double yPos, double  xSpeed, double ySpeed, double mass) {
 		super(xPos, yPos, xSpeed, ySpeed, mass);
                 this.radius = rad;
 	}
 	
-	public int getRadius() {
+	public double getRadius() {
 		return this.radius;
 	}
 	
-	public void setRadius(int radius) {
+	public void setRadius(double radius) {
 		this.radius = radius;
 	}	
 }
