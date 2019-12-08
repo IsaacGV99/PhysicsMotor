@@ -18,7 +18,7 @@ public abstract class ObjectCollision {
 		this.collision = this.areColliding();
 		return this.collision;
 	}
-	protected abstract void collisionManagment();
+	public abstract void collisionManagment();
 	
 	protected abstract boolean areColliding();	
 	
