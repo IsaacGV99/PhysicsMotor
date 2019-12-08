@@ -3,31 +3,31 @@ package com.iteso.motor;
 
 public class Vector {
 	
-	private double x, y;
+	private int x, y;
 	
 	public Vector() {
 		this.x = 1;
 		this.y = 1;
 	}
 	
-	public Vector(double x, double y) {
+	public Vector(int x, int y) {
 		this.x = x;
 		this.y = y;
 	}
 	
-	public double getX() {
+	public int getX() {
 		return x;
 	}
 	
-	public double getY() {
+	public int getY() {
 		return y;
 	}
 	
-	public void setX(double x) {
+	public void setX(int x) {
 		this.x = x;
 	}
 	
-	public void setY(double y) {
+	public void setY(int y) {
 		this.y = y;
 	}
 	
@@ -39,7 +39,7 @@ public class Vector {
 		return (Math.atan(this.y / this.x));
 	}
 	
-	public void escalar(double esc) {
+	public void escalar(int esc) {
 		this.x = this.x * esc;
 		this.y = this.y * esc;
 	}
@@ -58,20 +58,32 @@ public class Vector {
 		return res;
 	}
 	
-	public static Vector normalize(Vector v) {
+	/*public static Vector normalize(Vector v) {
 		Vector norm = new Vector();
 		norm.setX(v.getX()/v.magnitude());
 		norm.setY(v.getY()/v.magnitude());
 		return norm;
-	}
+	}*/
 	
 	public static double distance(Vector v1, Vector v2) {
 		return Math.sqrt(Math.pow(v1.getX() - v2.getX(), 2) +
 						 Math.pow(v1.getY() - v2.getY(), 2));
 	}
 	
-	public static double dot(Vector v1, Vector v2) {
+	public static int dot(Vector v1, Vector v2) {
 		return v1.getX()*v2.getX() + v1.getY()*v2.getY();
  	}
+        
+        public  void scaling(double scalar){
+            if (scalar != 0){
+                this.x = (int)scalar*this.x;
+                this.y = (int)scalar*this.x;
+            }
+        }
+        @Override
+        public Vector clone(){
+            Vector v = new Vector(this.x, this.y);
+            return v;    
+        }
 }
 
