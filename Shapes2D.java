@@ -6,16 +6,16 @@ public abstract class Shapes2D{
 	public Vector gravity = new Vector(0,-9.81);//gravedad es un vector de velocidad 
 	public int mass;//Masa del cuerpo sólido 
 	 
-	public Shapes2D(int x_pos, int y_pos, int x_speed, int y_speed ,int masa){  
-	 	this.position.setX(x_pos);     
-	 	this.position.setY(y_pos);  
-	 	this.speed.setX(x_speed);  
-	 	this.speed.setY(y_speed);  
+	public Shapes2D(int xPos, int yPos, int xSpeed, int ySpeed ,int masa){  
+	 	this.position.setX(xPos);     
+	 	this.position.setY(yPos);  
+	 	this.speed.setX(xSpeed);  
+	 	this.speed.setY(ySpeed);  
 	 	this.mass = mass; 
 	}
 	
-	public Shapes2D(int x_pos, int y_pos) {
-		this(x_pos, y_pos, 0, 0, 1);
+	public Shapes2D(int xPos, int yPos) {
+		this(xPos, yPos, 0, 0, 1);
 	}
 	
 	public Vector getPosition() {
