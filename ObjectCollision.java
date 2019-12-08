@@ -1,37 +1,24 @@
-public abstract class Shape3D {
 
-	protected double x = 0, y = 0, z = 0;
+public abstract class ObjectCollision {
 
-	public Shape3D(double x, double y, double z) {
-		move(x, y, z);
-	}
-	
-	public double getX() {
-		return x;
-	}
+	protected Shapes2D obj1, obj2;
+	private boolean collision;
 
-	public double getY() {
-		return y;
-	}
-
-	public double getZ() {
-		return z;
+	public ObjectCollision(Shape2D obj1, Shape2D obj2) {
+		this.obj1 = obj1;
+		this.obj2 = obj2;
 	}
 	
-	public void move(double dx, double dy, double dz) {
-		this.x += dx;
-		this.y += dy;
-		this.z += dz;
+	public boolean isThereCollision(){
+		return this.collision;
 	}
 	
-	@Override
-	public String toString() {
-		return String.format("Coordenadas: <%.1f, %.1f, %.1f>\nArea = %.2f\nVolumen = %.2f",
-				              this.x, this.y, this.z, area(), volume());
+	public boolean updateStatus(){
+		this.collision = this.areColliding();
+		return this.collision;
 	}
+	protected abstract void collisionManagment();
 	
-	public abstract double area();
-	
-	public abstract double volume();	
+	protected abstract boolean areColliding();	
 	
 }
